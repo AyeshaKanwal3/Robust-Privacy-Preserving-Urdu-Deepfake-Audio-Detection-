@@ -1,0 +1,29 @@
+Title
+Robust Privacy-Preserving Urdu Deepfake Audio Detection with Lightweight and Transformer-Based Models
+Author
+AYESHA KANWAL, Mamoona Quddos
+
+Abstract
+Urdu deepfake audio detection remains challenging because existing studies are limited by shallow models, single spoofing methods, and weak robustness under realistic noise. Your uploaded research addresses these gaps by proposing a privacy-preserving, speaker-independent framework that uses multiple synthesis techniques, noise augmentation, and feature-only processing instead of raw audio storage. 1 2 The strongest uploaded version reports evaluation across LightweightCNN, ECAPA-TDNN, and AASIST, with LightweightCNN achieving the best performance, including an Equal Error Rate of 0.0167 and an AUC of 0.9988. 3 The framework is designed for reproducibility, efficiency, and practical deployment in resource-constrained settings. 4
+Keywords
+Urdu deepfake detection, audio spoofing, privacy-preserving machine learning, speaker-independent training, AASIST, ECAPA-TDNN, LightweightCNN
+1. Introduction
+Synthetic speech and voice cloning tools have made audio impersonation easier to generate and harder to detect. Your uploaded work frames this problem specifically for Urdu, where data scarcity, limited benchmarks, and noisy real-world conditions make robust detection especially difficult. 1 2
+Prior versions in the upload set emphasize that earlier research relied on shallow RNN-LSTM style models, narrow spoofing pipelines such as RVC and RTVC, and clean datasets that risk speaker-overlap overfitting. 1 The revised framework improves on this by adding multi-tool synthetic generation, real-world augmentation, and speaker-independent splits. 2
+2. Related Work
+The uploaded drafts describe a progression from limited Urdu-specific spoofing studies to a more systematic and privacy-aware detection pipeline. 1 The final uploaded paper also reports a comparison of LightweightCNN, ECAPA-TDNN, and AASIST, which gives the project a stronger baseline and model-selection story. 3
+3. Methodology
+3.1 Data Construction
+The dataset combines multiple synthetic speech generation methods, including Tacotron, VITS, FastSpeech, RVC, and RTVC, alongside realistic audio augmentation for noise and channel variation. 1 2 This design is intended to reduce overfitting to a single spoofing family and improve robustness across diverse attack conditions. 1
+3.2 Privacy-Preserving Pipeline
+A major contribution in the uploaded work is feature-only processing, where only extracted representations are stored or transmitted rather than raw audio. 4 The documents also describe privacy-preserving extensions such as federated learning and homomorphic encryption as part of the broader research vision. 1
+3.3 Model Architecture
+The uploaded research benchmarks LightweightCNN, ECAPA-TDNN, and AASIST, with the final paper identifying LightweightCNN as the top performer. 3 Another upload notes that AASIST and transformer-style baselines are included for strong comparative evaluation, especially where accuracy must be balanced against deployment cost. 4
+3.4 Evaluation
+The reported evaluation uses Equal Error Rate, AUC, inference time, robustness under noise and compression, and resource cost. 4 The strongest result in the upload set is the LightweightCNN benchmark, which achieved EER 0.0167 and AUC 0.9988. 3
+4. Results
+The uploaded final version reports that all evaluated models were efficient enough for practical use, with inference times under 100 milliseconds in the described setup. 4 It also states that LightweightCNN performed best overall, while AASIST was stronger in accuracy-focused comparisons and suitable as a benchmark model. 3 The work further emphasizes that the system remains robust under noisy and compressed conditions, which supports real-world deployment. 4
+5. Discussion
+The main value of the project is that it combines three things that are often missing together in Urdu deepfake detection: privacy, robustness, and reproducibility. 1 3 The feature-only design strengthens privacy, while the multi-tool spoofing setup and speaker-independent splits strengthen generalization. 4 1
+6. Conclusion
+This work presents a practical and reproducible Urdu audio deepfake detection framework built around privacy-preserving feature extraction, multiple spoofing methods, and efficient model benchmarking. 3 4 For an academic CV, this is a strong project because it can be backed by a paper PDF, a tagged GitHub repository, and reproducibility materials
