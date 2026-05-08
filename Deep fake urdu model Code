@@ -1,0 +1,101 @@
+Filename: README.md
+# Urdu Deepfake Audio Detection
+
+This repository contains the code, documentation, and reproducibility files for the project on privacy-preserving Urdu deepfake audio detection.
+
+## Project summary
+
+This project detects synthetic or spoofed Urdu speech using privacy-aware feature extraction and lightweight machine learning models. The research focuses on speaker-independent evaluation, robustness under noise, and efficient deployment.
+
+## Main contributions
+
+- Multi-tool synthetic speech dataset creation
+- Speaker-independent training and evaluation
+- Privacy-preserving feature-only pipeline
+- Benchmarking of LightweightCNN, ECAPA-TDNN, and AASIST
+- Robustness testing under noisy and compressed conditions
+
+## Repository structure
+
+- `src/` model and training code
+- `data/` dataset metadata or allowed inputs
+- `features/` extracted features only, not raw audio
+- `results/` metrics, plots, and outputs
+- `models/` saved checkpoints
+- `notebooks/` experiments and analysis
+- `reproducibility.md` run instructions and environment details
+- `requirements.txt` dependency list
+- `README.md` project overview
+
+## Installation
+
+```bash
+git clone https://github.com/your-username/urdu-deepfake-detection.git
+cd urdu-deepfake-detection
+pip install -r requirements.txt
+Training
+python src/train.py
+Evaluation
+python src/evaluate.py
+Expected outputs
+•	Equal Error Rate
+•	AUC score
+•	inference time
+•	robustness results
+•	calibration or confusion plots
+Privacy note
+This repository stores extracted features and metadata instead of raw audio whenever possible to reduce privacy risk.
+Reproducibility
+Use a tagged release for the exact version used in the paper.
+git checkout v1.0
+Record:
+•	Python version
+•	package versions
+•	random seed
+•	hardware used
+•	dataset split protocol
+•	model hyperparameters
+Citation
+If you use this work, cite the paper and the tagged GitHub release.
+
+## Reproducibility file draft
+
+**Filename:** `reproducibility.md`
+
+```markdown
+# Reproducibility notes
+
+## Environment
+- Python: 3.x
+- GPU: Kaggle P100 or equivalent
+- Main packages: [list packages]
+- Random seed: [seed]
+
+## Data construction
+- Synthetic speech methods: Tacotron, VITS, FastSpeech, RVC, RTVC
+- Augmentations: noise, telephony, compression
+- Split method: speaker-independent
+
+## Feature pipeline
+- Store extracted features only
+- Do not store raw audio unless explicitly permitted
+- Feature type: [MFCC, spectrogram, or other]
+
+## Models
+- LightweightCNN
+- ECAPA-TDNN
+- AASIST
+
+## Metrics
+- Equal Error Rate
+- AUC
+- inference time
+- robustness under noise and compression
+
+## How to reproduce
+1. Clone the repository
+2. Install dependencies
+3. Prepare the feature set
+4. Train the models
+5. Run evaluation
+6. Compare the outputs with the paper figures and tables
